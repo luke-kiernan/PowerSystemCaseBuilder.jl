@@ -1361,7 +1361,7 @@ function _duplicate_system(main_sys::PSY.System, twin_sys::PSY.System, HVDC_line
             active_power_limits_to = (min = -1000.0, max = 1000.0),
             reactive_power_limits_from = (min = -1000.0, max = 1000.0),
             reactive_power_limits_to = (min = -1000.0, max = 1000.0),
-            loss = (l0 = 0.0, l1 = 0.1),
+            loss = LinearCurve(0.0, 0.1),
             services = Vector{Service}[],
             ext = Dict{String, Any}(),
         )
